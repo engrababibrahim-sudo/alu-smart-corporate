@@ -8,6 +8,12 @@ const solutions = [
   { number:"03", title:"Custom Profiles", arTitle:"المقاطع المخصصة", description:"Profiles developed around specific dimensions, functions and project requirements.", arDescription:"مقاطع هندسية مخصصة وفق الأبعاد والوظائف ومتطلبات المشروع." },
 ];
 
+const projects = [
+  { number:"01", title:"Architectural Facades", arTitle:"واجهات معمارية", tag:"ARCHITECTURAL / 01", arTag:"معماري / 01", text:"A presentation framework prepared for a premium façade case study.", arText:"إطار عرض مجهز لدراسة حالة خاصة بالواجهات المعمارية." },
+  { number:"02", title:"Industrial Applications", arTitle:"تطبيقات صناعية", tag:"INDUSTRIAL / 02", arTag:"صناعي / 02", text:"A structured case-study space for demanding industrial applications.", arText:"مساحة منظمة لعرض دراسات حالات التطبيقات الصناعية." },
+  { number:"03", title:"Custom Profile Project", arTitle:"مشروع مقطع مخصص", tag:"CUSTOM / 03", arTag:"مخصص / 03", text:"A dedicated frame for custom engineering and profile development.", arText:"إطار مخصص لعرض الحلول الهندسية وتطوير المقاطع." },
+];
+
 const process = [
   ["01","Brief","We understand the project, application and required outcome.","نفهم المشروع والاستخدام والنتيجة المطلوبة."],
   ["02","Engineering","Requirements become a precise technical direction.","نحوّل المتطلبات إلى اتجاه تقني واضح."],
@@ -93,11 +99,21 @@ export default function Home() {
       <section id="projects" className="section projects-section"><div className="container">
         <div className="section-topline"><div><div className="section-index">03 / 04</div><p className="section-label">{ar?"المشروعات":"PROJECTS"}</p><h2>{ar?"أداء يليق بالمشروع.":"Performance that belongs in the project."}</h2></div>
           <p className="section-intro">{ar?"قسم مهيأ لعرض مشروعات ALU SMART الحقيقية عند استلام الصور والبيانات.":"A premium project showcase prepared for ALU SMART’s real photography and case studies."}</p></div>
-        <div className="project-feature">
-          <div className="project-copy"><span className="project-overline">ALU SMART / PROJECTS</span><h3>{ar?"المشروع يبدأ من التفاصيل.":"A project begins with the details."}</h3>
-            <p>{ar?"هذا الإطار سيصبح معرض مشروعات فعليًا عند استلام صور وبيانات العميل.":"This frame is ready to become a real project gallery once the client’s photography and project data are supplied."}</p>
-            <a href="#contact" className="button button-secondary">{ar?"أرسل بيانات المشروع":"Submit Project Details"}</a></div>
-          <div className="project-art" aria-hidden="true"><div className="building">{Array.from({length:8},(_,i)=><span key={i}/>)}</div><div className="project-light"/><div className="project-label">ARCHITECTURE / 01</div></div>
+        <div className="projects-showcase">
+          <div className="project-feature">
+            <div className="project-copy"><span className="project-overline">ALU SMART / PROJECTS</span><h3>{ar?"المشروع يبدأ من التفاصيل.":"A project begins with the details."}</h3>
+              <p>{ar?"مساحة عرض جاهزة لاستقبال صور المشروع الحقيقية، الموقع، نطاق العمل والنتائج عند استلام بيانات العميل.":"A premium case-study frame ready for the real project photography, location, scope and results once the client data is supplied."}</p>
+              <a href="#contact" className="button button-secondary">{ar?"أرسل بيانات المشروع":"Submit Project Details"}</a></div>
+            <div className="project-art project-art-main" aria-hidden="true"><div className="building">{Array.from({length:8},(_,i)=><span key={i}/>)}</div><div className="project-light"/><div className="project-label">ARCHITECTURE / 01</div></div>
+          </div>
+          <div className="project-mini-grid">{projects.map((project,i)=>
+            <article className="project-mini-card" key={project.number}>
+              <div className={"project-mini-art mini-"+(i+1)}><span>{project.number}</span><div className="mini-structure">{Array.from({length:4},(_,j)=><i key={j}/>)}</div></div>
+              <div className="project-mini-meta"><span>{ar?project.arTag:project.tag}</span><span>↗</span></div>
+              <h3>{ar?project.arTitle:project.title}</h3>
+              <p>{ar?project.arText:project.text}</p>
+            </article>
+          )}</div>
         </div>
       </div></section>
 
