@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { use, useState } from "react";
 import Link from "next/link";
 import { categoryLabels, getProductById } from "../../lib/catalog";
 
@@ -8,14 +8,8 @@ type Props = { params: Promise<{ id: string }> };
 
 export default function ProductDetailsPage({ params }: Props) {
   const [language, setLanguage] = useState<"en" | "ar">("en");
-  const [id, setId] = useState<string | null>(null);
+  const { id } = use(params);
   const ar = language === "ar";
-
-  if (!id) {
-    params.then((value) => setId(value.id));
-    return <main className="product-detail-page"><div className="product-loading">Loading product…</div></main>;
-  }
-
   const product = getProductById(id);
 
   if (!product) {
