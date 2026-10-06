@@ -110,7 +110,7 @@ export default function ProductsPage() {
                     ? "تفاصيل المنتج والصورة والملف الفني ستُضاف بعد استلام الكتالوج الأصلي."
                     : "Product details, photography and technical documentation will be added from the original catalog."}
                 </p>
-                <a href="/#contact">{isArabic ? "طلب التفاصيل" : "Request details"} <span>→</span></a>
+                <a href={`/products/${product.id}`}>{isArabic ? "عرض المنتج" : "View product"} <span>→</span></a>
               </article>
             ))}
           </div>
