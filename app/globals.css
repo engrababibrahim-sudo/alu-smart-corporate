@@ -233,3 +233,42 @@ button { border: 0; cursor: pointer; }
   html { scroll-behavior:auto; }
   *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
 }
+
+
+.catalog-hero{padding:125px 0 95px;background:linear-gradient(180deg,#0a0d10,#080b0e);border-bottom:1px solid var(--line)}
+.catalog-hero-inner{display:grid;grid-template-columns:1fr .3fr;gap:70px;align-items:end}
+.catalog-index{display:block;color:#66727d;font-size:.65rem;letter-spacing:.16em;margin-bottom:20px}
+.catalog-hero h1{max-width:850px;font-size:clamp(3.2rem,6vw,6.5rem);line-height:.94;letter-spacing:-.065em;font-weight:600}
+.catalog-lead{max-width:620px;margin-top:28px;color:var(--muted);line-height:1.9}
+.catalog-count{border-inline-start:1px solid var(--line);padding-inline-start:30px}
+.catalog-count strong{display:block;font-size:4.5rem;line-height:1;font-weight:600;letter-spacing:-.06em}
+.catalog-count span,.catalog-count small{display:block;color:#7b8792;font-size:.7rem}
+.catalog-count small{margin-top:10px;line-height:1.6}
+.catalog-controls-section{padding:60px 0 130px;background:#0a0e12}
+.catalog-controls{display:flex;align-items:end;justify-content:space-between;gap:30px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.filter-group{display:flex;flex-wrap:wrap;gap:8px}
+.filter-button{padding:11px 16px;border:1px solid var(--line);border-radius:999px;background:transparent;color:#929da8;font-size:.72rem;cursor:pointer}
+.filter-button:hover,.filter-button.active{background:#e6eaed;color:#080b0e;border-color:#e6eaed}
+.catalog-search{display:flex;flex-direction:column;gap:7px;width:min(100%,320px)}
+.catalog-search span{color:#75818c;font-size:.65rem;letter-spacing:.12em}
+.catalog-search input{height:46px;border:1px solid var(--line);border-radius:9px;background:#0e1419;color:#fff;outline:none;padding:0 14px}
+.catalog-search input:focus{border-color:rgba(255,255,255,.3)}
+.catalog-results-head{display:flex;justify-content:space-between;color:#697581;font-size:.68rem;padding:22px 0}
+.catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.catalog-card{min-height:430px;padding:18px;border:1px solid var(--line);border-radius:18px;background:#0e141a;display:flex;flex-direction:column;transition:transform .3s ease,border-color .3s ease}
+.catalog-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.22)}
+.catalog-card-visual{height:190px;position:relative;overflow:hidden;border-radius:11px;background:linear-gradient(145deg,#2b353e,#0b0e12)}
+.catalog-card-visual>span{position:absolute;left:14px;bottom:12px;color:#b8c2ca;font-size:.62rem;letter-spacing:.12em}
+.profile-visual{position:absolute;inset:35px;display:flex;align-items:center;justify-content:center;gap:8px;transform:rotate(-18deg)}
+.profile-visual i{display:block;width:25%;height:130%;border:2px solid #b7c1c9;background:linear-gradient(90deg,rgba(255,255,255,.2),transparent,rgba(0,0,0,.2))}
+.profile-visual i:nth-child(2){height:150%;opacity:.55}.profile-visual i:nth-child(3){height:110%;opacity:.28}
+.catalog-card-meta{display:flex;justify-content:space-between;color:#6f7b87;font-size:.63rem;margin-top:18px}
+.catalog-card h2{font-size:1.35rem;font-weight:600;margin-top:12px}
+.catalog-card p{color:#7c8893;font-size:.77rem;line-height:1.8;margin-top:9px}
+.catalog-card>a{margin-top:auto;padding-top:20px;color:#e1e6ea;font-size:.75rem;font-weight:700}
+.catalog-empty{padding:70px 0;color:#7f8b96;text-align:center}
+.catalog-cta{padding:100px 0;background:linear-gradient(115deg,#dfe4e8,#8e99a3 45%,#262e35);color:#080b0e}
+.catalog-cta-inner{display:flex;align-items:end;justify-content:space-between;gap:50px}
+.catalog-cta h2{max-width:800px;font-size:clamp(2.4rem,4.5vw,4.7rem);line-height:.98;letter-spacing:-.055em;font-weight:600}
+@media(max-width:900px){.catalog-hero-inner{grid-template-columns:1fr}.catalog-count{border-inline-start:0;border-top:1px solid var(--line);padding:25px 0 0}.catalog-grid{grid-template-columns:1fr 1fr}.catalog-controls{align-items:stretch;flex-direction:column}.catalog-search{width:100%}}
+@media(max-width:600px){.catalog-grid{grid-template-columns:1fr}.catalog-hero{padding:90px 0 70px}.catalog-cta-inner{align-items:flex-start;flex-direction:column}}
