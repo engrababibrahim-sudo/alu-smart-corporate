@@ -20,7 +20,8 @@ export const categoryLabels: Record<ProductCategory, { en: string; ar: string }>
   Add the client's real products here when the source catalog is received.
   No technical specifications are invented in this demo dataset.
 */
-export function getProductById(id: string) {\n  return products.find((product) => product.id === id);\n}\n\nexport const products: Product[] = [
+
+export const products: Product[] = [
   { id: "arch-001", category: "architectural", name: "Architectural System 01", arName: "نظام معماري 01", code: "ARCH-001" },
   { id: "arch-002", category: "architectural", name: "Architectural System 02", arName: "نظام معماري 02", code: "ARCH-002" },
   { id: "arch-003", category: "architectural", name: "Architectural System 03", arName: "نظام معماري 03", code: "ARCH-003" },
@@ -34,3 +35,7 @@ export function getProductById(id: string) {\n  return products.find((product) =
   { id: "custom-003", category: "custom", name: "Custom Profile 03", arName: "مقطع مخصص 03", code: "CUS-003" },
   { id: "custom-004", category: "custom", name: "Custom Profile 04", arName: "مقطع مخصص 04", code: "CUS-004" },
 ];
+
+export function getProductById(id: string) {
+  return products.find((product) => product.id === id);
+}
