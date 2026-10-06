@@ -331,3 +331,39 @@ button { border: 0; cursor: pointer; }
  .hero-copy,.hero-art,.art-slab,.ring-a,.ring-b,.slab-shine{animation:none}
  .button,.solution-card{transition:none}
 }
+
+
+/* Premium catalog layer */
+.catalog-hero-premium{position:relative;overflow:hidden;background:radial-gradient(circle at 78% 45%,rgba(205,216,225,.1),transparent 25%),linear-gradient(180deg,#090c10,#07090b)}
+.catalog-hero-premium:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,transparent 45%,rgba(255,255,255,.035) 50%,transparent 55%);transform:translateX(-35%);animation:catalogSweep 9s ease-in-out infinite}
+.catalog-hero-premium h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px #d8dee4}
+.catalog-card-premium{position:relative;overflow:hidden;border-radius:20px;background:linear-gradient(145deg,#111820,#0a0e12);box-shadow:0 18px 45px rgba(0,0,0,.18)}
+.catalog-card-premium:after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:20px;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.045),transparent 70%);opacity:0;transition:opacity .35s ease}
+.catalog-card-premium:hover:after{opacity:1}
+.catalog-card-premium:hover{transform:translateY(-9px) scale(1.005);box-shadow:0 26px 60px rgba(0,0,0,.3)}
+.catalog-card-visual{height:230px;background:radial-gradient(circle at 50% 45%,#394651,#11171d 62%,#090c10)}
+.catalog-card-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.1),transparent 35%,rgba(255,255,255,.03))}
+.catalog-card-number{position:absolute;right:15px;top:13px;color:rgba(255,255,255,.22);font:600 2.3rem/1 monospace}
+.catalog-card-code{left:15px!important;bottom:14px!important}
+.catalog-card-line{position:absolute;left:15px;right:15px;bottom:38px;height:1px;background:rgba(255,255,255,.11)}
+.catalog-card-premium .profile-visual{inset:38px;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.catalog-card-premium:hover .profile-visual{transform:rotate(-12deg) scale(1.08)}
+.catalog-card-premium .profile-1 i:nth-child(1){height:120%;width:21%}
+.catalog-card-premium .profile-1 i:nth-child(2){height:155%;width:29%}
+.catalog-card-premium .profile-2{transform:rotate(14deg) scale(.9)}
+.catalog-card-premium .profile-2 i{border-radius:5px}
+.catalog-card-premium .profile-3{transform:rotate(-4deg) scale(.95);gap:14px}
+.catalog-card-premium .profile-3 i{border-radius:50% 50% 8px 8px}
+.catalog-card-premium h2{font-size:1.45rem;letter-spacing:-.025em}
+.catalog-card-premium p{max-width:90%}
+.catalog-card-link{margin-top:auto;padding-top:20px;color:#e7ebee;font-size:.76rem;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.catalog-card-link b{font-size:1rem;font-weight:500}
+.catalog-cta-premium{position:relative;overflow:hidden;background:linear-gradient(115deg,#e5e9ec,#aab4bc 38%,#4b5660 78%,#141a20)}
+.catalog-cta-premium:after{content:"ALU / SMART";position:absolute;right:-10px;bottom:-55px;font-size:clamp(7rem,18vw,16rem);font-weight:800;letter-spacing:-.09em;color:rgba(255,255,255,.14);pointer-events:none}
+.catalog-cta-premium .container{position:relative;z-index:1}
+@keyframes catalogSweep{0%,45%{transform:translateX(-40%)}70%,100%{transform:translateX(40%)}}
+@media(max-width:600px){
+ .catalog-card-visual{height:210px}
+ .catalog-card-premium h2{font-size:1.3rem}
+ .catalog-cta-premium:after{font-size:6rem}
+}
